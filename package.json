@@ -4,7 +4,8 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "test": "cypress run"
   },
   "name": "cypress-practice",
   "description": "cypress testing",
