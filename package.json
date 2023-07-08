@@ -2,9 +2,14 @@
   "devDependencies": {
     "cypress": "^12.17.0"
   },
-     "scripts": {
+  "scripts": {
     "cypress:open": "cypress open",
-        "cy:run": "cypress run"
-  }
-
+    "cy:run": "cypress run"
+  },
+  "name": "cypress-practice",
+  "description": "cypress testing",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "author": "https://github.com/micrometre/cypress",
+  "license": "ISC"
 }
