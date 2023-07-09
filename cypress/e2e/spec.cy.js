@@ -10,8 +10,7 @@ describe('Nav Menus', () => {
     beforeEach(() => {
       cy.viewport('iphone-5')
     })
-
-    it('displays Contact page  ', () => {
+    it('displays Home page  ', () => {
       cy.visit('/')
       cy.get('.navbar-toggler')
         .should('be.visible')
@@ -33,7 +32,6 @@ describe('Nav Menus', () => {
         .go('back')
 
     })
-
   })
 })
 
