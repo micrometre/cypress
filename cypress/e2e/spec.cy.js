@@ -11,18 +11,26 @@ describe('Nav Menus', () => {
     beforeEach(() => {
       cy.viewport('iphone-5')
     })
-    it('displays mobile menu on click', () => {
-    cy.visit('/')
-    cy.get('.navbar-toggler')
-      .should('be.visible')
-      .click()
-      .get('#navbarSupportedContent').should('be.visible')
-      .click()
-      .contains('Contact').click()
-      .location('pathname').should('eq', '/contact/')
-      .go('back')
+    it('use requests to navigation bar links', () => {
+      const pages = ['Contact']
+      cy.visit('/')
+      cy.get('.navbar-toggler')
+        .should('be.visible')
+        .click()
+        .get('#navbarSupportedContent').should('be.visible')
+        .click()
+      pages.forEach(page => {
+        cy
+          .contains(page)
+          .then((link) => {
+            cy.request(link.prop('href'))
+          })
 
-    })
+      })
+
+    });
+
   })
 })
+
 
