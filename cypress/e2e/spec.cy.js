@@ -12,7 +12,7 @@ describe('Nav Menus', () => {
       cy.viewport('iphone-5')
     })
     it('use requests to navigation bar links', () => {
-      const pages = ['Home, Contact']
+      const pages = ['/, Contact']
       cy.visit('/')
       cy.get('.navbar-toggler')
         .should('be.visible')
