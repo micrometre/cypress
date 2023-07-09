@@ -13,6 +13,12 @@ describe('The Home Page', () => {
     cy.visit('/')
     cy.get('.navbar-brand').click();
   });
+
+ it('finds the navbar-toggler collapsed ', () => {
+    cy.visit('/')
+    cy.get('.navbar-toggler').click();
+    })
+
 })
 
 
