@@ -3,6 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   screenshotOnRunFailure: false,
   video: false,
+  viewportHeight: 560,
+viewportWidth: 915,
   reporter: "cypress-multi-reporters",
   reporterOptions: {
     reporterEnabled: "mochawesome",
