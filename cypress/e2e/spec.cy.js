@@ -17,6 +17,7 @@ describe('Nav Menus', () => {
       .should('be.visible')
       .click()
       .get('#navbarSupportedContent').should('be.visible')
+      .click()
     })
   })
 })
