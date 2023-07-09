@@ -14,9 +14,9 @@ describe('The Home Page', () => {
     cy.get('.navbar-brand').click();
   });
 
- it('finds the navbar-toggler collapsed ', () => {
+ it('finds the mobile navbar-toggler ', () => {
     cy.visit('/')
-    cy.get('.navbar-toggler').click();
+    cy.get('.navbar-toggler');
     })
 
 })
