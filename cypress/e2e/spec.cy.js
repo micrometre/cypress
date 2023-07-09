@@ -15,3 +15,32 @@ describe('The Home Page', () => {
 })
 
 
+describe('Nav Menus', () => {
+
+  context('iphone-5 resolution', () => {
+
+    beforeEach(() => {
+
+      cy.viewport('iphone-5')
+
+    })
+
+    it('displays mobile menu on click', () => {
+
+    cy.get('.navbar-brand')
+
+
+        .should('be.visible')
+
+        .find('i.hamburger')
+
+        .click()
+
+      cy.get('ul.slideout-menu').should('be.visible')
+
+    })
+
+  })
+
+})
+
