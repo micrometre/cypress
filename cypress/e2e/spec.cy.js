@@ -18,6 +18,10 @@ describe('Nav Menus', () => {
       .click()
       .get('#navbarSupportedContent').should('be.visible')
       .click()
+      .contains('Contact').click()
+      .location('pathname').should('eq', '/contact/')
+      .go('back')
+
     })
   })
 })
