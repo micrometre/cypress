@@ -1,16 +1,18 @@
-  describe('Home page Test', () => {
-  it('titles are correct', () => {
-    const page = cy.visit('https://croydonwebservices.com/');
-    page.get('title').should('have.text', 'Home | croydonwebservices.com')
+describe('The Home Page', () => {
+  it('successfully loads', () => {
+    cy.visit('/')
 
+  })
+
+  it('titles are correct', () => {
+    const page = cy.visit('/');
+    page.get('title').should('have.text', 'Home | croydonwebservices.com')
+  });
+
+  it('loads home page', () => {
+    cy.visit('/')
+    cy.get('.navbar-brand').click();
   });
 })
 
 
-
-describe('testing brand icon ', () => {
-    it('loads home page', () => {
-      cy.visit('https://croydonwebservices.com/');
-      cy.get('.navbar-brand').click();
-    });
-  });
