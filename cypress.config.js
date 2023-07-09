@@ -4,8 +4,9 @@ module.exports = defineConfig({
   screenshotOnRunFailure: false,
   video: false,
   viewportHeight: 560,
-viewportWidth: 915,
+  viewportWidth: 915,
   reporter: "cypress-multi-reporters",
+
   reporterOptions: {
     reporterEnabled: "mochawesome",
     mochawesomeReporterOptions: {
@@ -13,10 +14,12 @@ viewportWidth: 915,
       quite: true,
       overwrite: false,
       html: false,
-      json: true
-    }
+      json: true,
+    },
   },
+
   e2e: {
-    baseUrl: 'https://croydonwebservices.com',
+    baseUrl: "https://croydonwebservices.com",
   },
+
 });
